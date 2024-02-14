@@ -9,7 +9,8 @@ class HomeController extends Controller{
     
     public function index(){
         return view("blog/home", [
-            "articles" =>  Articles::order("desc")->limit(3)->get()
+            // orderBy ASC = CRESCENTE E DESC = DECRECENTE
+            "articles" =>  Articles::orderBy("id", "DESC")->limit(3)->get()
         ]);
     }
 }
