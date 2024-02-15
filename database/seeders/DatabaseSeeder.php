@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         //rodar apenas uma classe de seed
     //    $this->call(CategoriesSeed::class);
-       $this->call(ArticlesSeed::class);
+       $this->call(UserSeed::class);
 
         //rodar varias classes ao mesmo tempo
        /*$this->call([
