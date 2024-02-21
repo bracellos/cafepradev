@@ -11,7 +11,14 @@ use Illuminate\Validation\ValidationException;
 class ArticlesController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * @OA\Get(
+     *   tags={"Articles"},
+     *   path="/articles",
+     *   summary="list all articles",
+     *   @OA\Response(response=200, description="OK"),
+     *   @OA\Response(response=401, description="Unauthorized"),
+     *   @OA\Response(response=404, description="Not Found"),
+     * )
      */
     public function index()
     {
